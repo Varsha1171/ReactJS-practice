@@ -5,3 +5,10 @@
     text-shadow:black  2px;
     background-color:azure;
 }
+.form-controls .InvalidClass {
+    border-color: red;
+    background-color: rgb(243, 206, 206);
+}
+.form-controls .InvalidClass {
+    color: red;
+}

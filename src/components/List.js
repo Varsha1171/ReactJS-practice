@@ -1,23 +1,13 @@
-import React,{useState} from "react";
+import './List.css'
 const List=(props)=>{
-        const listOfTask=[
-                {task:"coding for website"},
-                {task:"analysis of website"},
-        ];
-       let tasks=listOfTask.map((member,index)=>
-       <h4 key={index}>{member.task}</h4>
-            );
-
-            const[alistOfTask,setListOfTask]=useState(tasks)
-        const updatedListOfTask=(props)=>{
-            setListOfTask((alistOfTask)=>{
-                return [...alistOfTask,props];
-            });
-        }
-        return (
-            <div>
-                {alistOfTask}
-            </div>
-        );
-};
+    const mappingOfList=props.list.map((member,index)=>
+         <h4 key={index}>{member.task}</h4>
+    );
+    return(
+        <div className="displayOfMembers">
+            {mappingOfList}
+            
+        </div>
+    );
+}
 export default List;
